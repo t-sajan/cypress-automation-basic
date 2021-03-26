@@ -1,7 +1,7 @@
 # cypress-automation-basic
 Cypress Training - Website Automation
 
-#Install Dependencies
+# Install Dependencies
 npm install
 
 # Open Cypress
