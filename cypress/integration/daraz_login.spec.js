@@ -14,8 +14,8 @@ context("Login to Daraz w/ Email and Password", () => {
     );
 
     //Entering Login Email and Password
-    cy.get(".mod-input-loginName").type("jacksnow00700@gmail.com");
-    cy.get(".mod-input-password").type("jackthetester@123");
+    cy.get(".mod-input-loginName").type("xyz@gmail.com");
+    cy.get(".mod-input-password").type("xyz@123");
     cy.get(".mod-login-btn").should("be.visible").click();
     cy.wait(2000);
     //Assertion to verify user is logged in
