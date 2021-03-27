@@ -1,14 +1,14 @@
 /// <reference types="cypress" />
 
-context("Login to Daraz w/ Email and Password", () => {
+context("Add to Cart and Remove", () => {
   const username = Cypress.env("username");
   const password = Cypress.env("password");
-  it("1, 2| Verify that user can login to Daraz", () => {
-    //Go to Daraz Website
+  beforeEach(() => {
     cy.visit("/");
 
     //Click Login Option
     cy.get("#anonLogin").should("be.visible").click();
+
     //Assertion to verify user is in login page
     cy.get(".login-title").should(
       "contain.text",
@@ -21,12 +21,11 @@ context("Login to Daraz w/ Email and Password", () => {
     cy.get(".mod-login-btn").should("be.visible").click();
     cy.wait(2000);
     //Assertion to verify user is logged in
-    cy.get("#myAccountTrigger").should("have.text", "Jack's account").click();
+    cy.get("#myAccountTrigger").should("have.text", "Jack's account");
+  });
 
-    //Logout
-    cy.get('a[href*="//member.daraz.com.np/user/logout"]').click({
-      force: true,
-    });
-    cy.get("#anonLogin").should("be.visible");
+  it("4| Verify that User Can Add an item to the cart", () => {
+    cy.visit("/catalog/?q=mobile");
+    cy.wait(2000);
   });
 });

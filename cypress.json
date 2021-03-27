@@ -1,3 +1,7 @@
 {
-    "baseUrl": "https://www.daraz.com.np/"
+    "baseUrl": "https://www.daraz.com.np/",
+    "env": {
+        "username": "xyz@gmail.com",
+        "password": "xyz@123"
+      }
 }
