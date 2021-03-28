@@ -9,4 +9,5 @@ git clone url
 
 # Open Cypress
 - npx cypress open
-- click on integration tests files to run test cases
+
+click on integration tests files to run test cases
