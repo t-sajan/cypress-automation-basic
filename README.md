@@ -1,10 +1,12 @@
 # cypress-automation-basic
-Cypress Training - Website Automation
+- Cypress Training - Website Automation
+- First Clone the Project in local machine
 
-Currently inprogress - Please Checkback later :)
+git clone url
 
 # Install Dependencies
-npm install
+- npm install
 
 # Open Cypress
-npx cypress open
+- npx cypress open
+- click on integration tests files to run test cases
