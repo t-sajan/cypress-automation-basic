@@ -1,6 +1,8 @@
 /// <reference types="cypress" />
 
 context("Login to Daraz w/ Email and Password", () => {
+  const username = Cypress.env("username");
+  const password = Cypress.env("password");
   it("1, 2| Verify that user can login to Daraz", () => {
     //Go to Daraz Website
     cy.visit("/");
@@ -14,8 +16,8 @@ context("Login to Daraz w/ Email and Password", () => {
     );
 
     //Entering Login Email and Password
-    cy.get(".mod-input-loginName").type("xyz@gmail.com");
-    cy.get(".mod-input-password").type("xyz@123");
+    cy.get(".mod-input-loginName").type(username);
+    cy.get(".mod-input-password").type(password, { log: false });
     cy.get(".mod-login-btn").should("be.visible").click();
     cy.wait(2000);
     //Assertion to verify user is logged in
