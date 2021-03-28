@@ -1,0 +1,51 @@
+{
+    "success": true,
+    "model": {
+        "items": [],
+        "paging": {
+            "totalItems": 0,
+            "totalPages": 0,
+            "currentPage": 0
+        },
+        "myQuestions": [
+            {
+                "itemQuestionId": 420830926173,
+                "question": "Hello this is a Test... -_-",
+                "questionTime": "33  minutes ago",
+                "zonedQuestionTime": null,
+                "customerName": "Jack",
+                "answer": null,
+                "answerTime": null,
+                "zonedAnswerTime": null,
+                "itemId": 104626173,
+                "sellerId": 1000175,
+                "sellerName": "Test Store",
+                "belongToMe": true,
+                "isReportable": false,
+                "isDeleted": false,
+                "questionStatus": "Not answered",
+                "isLabel": null,
+                "categoryId": 1991,
+                "categoryName": "Step Machines",
+                "rootCategoryId": 1970,
+                "rootCategoryName": "Sports & Outdoors",
+                "imEnable": true,
+                "imUserId": 1000328
+            }
+        ],
+        "haveMainSellerAnswers": false,
+        "mainSellerName": null,
+        "totalItems": 0,
+        "totalItemsByMain": 0,
+        "totalItemsByOthers": 0,
+        "isQAClosed": false,
+        "imEnable": null,
+        "imUserId": null
+    },
+    "msgCode": null,
+    "httpStatusCode": 200,
+    "msgInfo": null,
+    "mappingCode": null,
+    "headers": {},
+    "bizExtMap": null
+}
