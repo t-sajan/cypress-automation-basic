@@ -15,10 +15,10 @@ context("Daraz Search & Filters", () => {
     cy.get("#q").should("have.value", "mobile");
   });
 
-  /* 
-    Test Scenario: 
+  /*
+    Test Scenario:
     - Apply multiple filter and add item to the cart (Brand, Price, Rating).
-    Scenario Covered: 
+    Scenario Covered:
     - Apply multiple filter
   */
   it("4| Verify that User Can Apply Brand, Rating & Price Filter", () => {
@@ -46,8 +46,8 @@ context("Daraz Search & Filters", () => {
     );
   });
 
-  /* 
-    Test Scenario: 
+  /*
+    Test Scenario:
     - Apply sort by filter from Low to High and select on the mobile search listing.
   */
   it("5| Verify that User Search Result by price low to high & Select a result item", () => {
@@ -68,8 +68,8 @@ context("Daraz Search & Filters", () => {
     cy.get(".pdp-button_theme_bluedaraz").should("have.text", "Buy Now");
   });
 
-  /* 
-    Test Scenario: 
+  /*
+    Test Scenario:
     - Visit the seller homepage (Oliz Homepage) in Daraz.
     - Search for Oliz Store in the Daraz Search Box.
     - Verify the base URL after user visit
@@ -89,8 +89,8 @@ context("Daraz Search & Filters", () => {
     cy.url().should("include", "/shop/oliz-store");
   });
 
-  /* 
-    Test Scenario: 
+  /*
+    Test Scenario:
     - Click for Free delivery -> Search for any item
     - Click Shop Now -> Verify Free Delivery in Product page
   */
@@ -106,5 +106,29 @@ context("Daraz Search & Filters", () => {
     cy.get(".delivery-option-item__promotion > .html-content")
       .should("be.visible")
       .contains("free shipping");
+  });
+
+  /*
+    Test Scenario:
+    - Verify Save More On App Click Action and verify App download link 
+  */
+  it("13| Verify app links while clicking save more on App Option", () => {
+    cy.visit("/");
+
+    //Clicking on Save more on app option from home page
+    cy.get("#topActionDownload").should("be.visible").click();
+    cy.get(".get-the-app").should("be.visible");
+
+    //Assertion to verify url in app download options
+    cy.get(".app-stores > a")
+      .should("have.attr", "href")
+      .and("include", "itunes.apple.com/app/id978058048");
+    cy.get(".app-stores > a")
+      .eq(1)
+      .should("have.attr", "href")
+      .and(
+        "include",
+        "play.google.com/store/apps/details?id=com.daraz.android"
+      );
   });
 });
