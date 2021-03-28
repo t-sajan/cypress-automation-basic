@@ -42,7 +42,7 @@ context("Daraz Stubbing", () => {
     Test Scenario: 
     - Ask Question for the particular product in Daraz and verify the question(Use API Stub)
     */
-  it("Stubber", () => {
+  it("Verify that user can ask question for a product", () => {
     //Stubbing Request for Asking Question
     cy.intercept("POST", "https://my.daraz.com.np/pdp/item/addItemSkuQA", {
       fixture: "askquestion.json",
