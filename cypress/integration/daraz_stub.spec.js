@@ -53,7 +53,7 @@ context("Daraz Stubbing", () => {
 
     //Visiting a Product Page
     cy.visit(
-      "/products/testing-product-ignore-dont-buy-i104626173-s1025920215.html"
+      "/products/test-product-pp2-do-not-buy-i103742177-s1024448116.html"
     );
 
     //Entering Question for the product

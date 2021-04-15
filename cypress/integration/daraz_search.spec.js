@@ -30,7 +30,11 @@ context("Daraz Search & Filters", () => {
       ":nth-child(2) > .c2uiAC > :nth-child(1) > .c1WzWT > :nth-child(1) > .ant-checkbox > .ant-checkbox-input"
     ).check();
     cy.get(".c2uiAC > :nth-child(2) > span").click();
-    cy.get('[placeholder="Min"]').should("be.visible").click().type("10000");
+    cy.get('[placeholder="Min"]')
+      .should("be.visible")
+      .click()
+      .wait(1000)
+      .type("10000");
     cy.get('[placeholder="Max"]').should("be.visible").click().type("20000");
     cy.get(".ant-btn").click();
 
@@ -98,7 +102,7 @@ context("Daraz Search & Filters", () => {
     cy.visit("/");
 
     //Click on Free Delivery Option from Home Page
-    cy.get('[data-color="#e52f1b"] > .card-channels-link').click();
+    cy.get(":nth-child(5) > .card-channels-link").click();
     //Click Shop Now on First Item Listing
     cy.contains("Shop Now").first().click();
 
